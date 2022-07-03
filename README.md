@@ -11,30 +11,31 @@ This python package is a wrapper for the Fortran KMAG code included in the `src`
 The model is fully self-contained in a single Fortran file. Call the relevant subroutines from your custom Fortran code.
 
 ### Requirements
- Your system needs to have Fortran installed to successfully compile the source code:
-    * Linux: ` apt install gfortran `
-    * Mac: ` brew install gcc `
+ Make sure your system has Fortran installed to successfully compile the source code:
+
+ * Linux: `apt install gfortran`
+ * Mac: `brew install gcc`
 
 To install the package, simply run the following command in the main directory of the package:
-    `pip install . `
+
+```bash
+pip install .
+```
 
 ## Usage
 The main function that computes the magnetic field strength is
 called kmag(). It requires the following parameters to be passed through:
 
-'''python
+```python
 rlt,brm,btm,bpm = kmag(time,epoch,r,theta,phi,by_imf,bz_imf,dp)
-'''
-    
-    where the inputs and outputs are:
-
-### INPUT:
+```
+    where
  * time (real) - a double precision variable denoting number of seconds from an epoch
  * epoch (string) - a five letter character which can be either 'ctime',
    'etime' or 'J2000'/upper or lower case
  * r, theta, phi (real) -  position of the field in a right-handed System III coordinate system (THETA and PHI are in radians)
  * by_imf, bz_imf (real) - Y and Z component of the interplanetary magnetic field in right-handed KSM coordinate system.
-### OUTPUT:
+    and
  * rlt (real) - local time
  * brm, btm, bpm (real) - model magnetic field in a spherical SYSTEM III 
    coordinate system (BRM, BTM and BPM are in nT)
