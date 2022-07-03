@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**KMAG** is a global magnetic field of the Saturn’s field ([Khurana et al., 2006](https://ui.adsabs.harvard.edu/abs/2006AGUSM.P44A..01K)) that includes modules that specify:
+**KMAG** is a global magnetic field of the Saturn’s field ([Khurana et al., 2006](https://ui.adsabs.harvard.edu/abs/2006AGUSM.P44A..01K), updated in 2012) that includes modules that specify:
 1. the internal spherical harmonic field,
 2. the ring current and the magnetotail current system,
 3. the field from the radial current system which reinforces corotation on the outflowing plasma,
