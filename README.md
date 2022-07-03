@@ -29,27 +29,25 @@ pip install .
 
 ## Usage
 The main function that computes the magnetic field strength is
-called kmag(). It requires the following parameters to be passed through:
+called `kmag()`. It requires the following parameters to be passed through:
 
 ```python
 import kmag
 rlt,brm,btm,bpm = kmag.kmag(time,epoch,r,theta,phi,by_imf,bz_imf,dp)
 ```
 where
- * time (real) - a double precision variable denoting number of seconds from an epoch
- * epoch (string) - a five letter character which can be either 'ctime',
-   'etime' or 'J2000'/upper or lower case
- * r, theta, phi (real) -  position of the field in a right-handed System III coordinate system (THETA and PHI are in radians)
- * by_imf, bz_imf (real) - Y and Z component of the interplanetary magnetic field in right-handed KSM coordinate system
- * rlt (real) - local time
- * brm, btm, bpm (real) - model magnetic field in a spherical SYSTEM III 
-   coordinate system (BRM, BTM and BPM are in nT)
+ * `time` (real) - a double precision variable denoting number of seconds from an epoch
+ * `epoch` (string) - a five letter character which can be either `ctime`, `etime` or `J2000`
+ * `r, theta, phi` (real) - position of the field in a right-handed System III coordinate system (`theta` and `phi` are in radians)
+ * `by_imf, bz_imf` (real) - Y and Z component of the interplanetary magnetic field in right-handed KSM coordinate system
+ * `rlt` (real) - local time
+ * `brm, btm, bpm` (real) - model magnetic field in a spherical System III coordinate system (in nT)
 
 The supported coordinate systems are:
-* S3C System III Cartesian (right-handed)
-* KSO Kronian-Sun-Orbital
-* KSM Kronian-Sun-Magnetic (So far same as KSO)
-* DIP Dipole (cartesian)
+* `S3C` System III Cartesian (right-handed)
+* `KSO` Kronian-Sun-Orbital
+* `DIP` Dipole (cartesian)
+* `KSM` Kronian-Sun-Magnetic (same as KSO)
 
 ### Example
 
@@ -59,7 +57,7 @@ See the example code given in `test/test.py` for an example of how to use the mo
 python test/test.py
 ```
 
-The code will check if the model is working correctly and print the magnetic field for a selected reference position.
+The code will check if the model is working correctly and print the magnetic field for a selected reference position (`R = [10,0,0]` RS in DIP).
 
 ## References:
 * Arridge, C. S., Achilleos, N., Dougherty, M. K., Khurana, K. K., & Russell, C. T. (2006). Modeling the size and shape of Saturn’s magnetopause with variable dynamic pressure. Journal of Geophysical Research, 111(A11), A11227. https://doi.org/10.1029/2005JA011574
