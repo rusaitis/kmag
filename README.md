@@ -27,6 +27,8 @@ To install the package, simply run the following command in the main directory o
 pip install .
 ```
 
+Tested on Ubuntu 11.2.0 (Python 3.10.4, gcc 11.2.0, numpy 1.23.0) and macOS 13.0 (Python 3.9.10, Homebrew GCC 11.3.0, numpy 1.23.0). 
+
 ## Usage
 The main function that computes the magnetic field strength is
 called `kmag()`. It requires the following parameters to be passed through:
